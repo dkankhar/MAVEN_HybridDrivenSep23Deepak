@@ -36,7 +36,7 @@ public class LoginTest extends TestBase{
 	@Test
 	public void verifyPasswordValidation() {
 		System.out.println("STEP: Enter valid UserName.");
-		login.enterUserEmail("dgkankhar@gmail.com");
+		login.enterUserEmail(login.getValuePropertyFile("username"));
 		System.out.println("STEP: Click on Login button.");
 		login.clickLoginButton();
 		System.out.println("VERIFY: Email Error message is not displayed!");
@@ -48,7 +48,7 @@ public class LoginTest extends TestBase{
 	@Test
 	public void verifyEmailValidation() {
 		System.out.println("STEP: Enter valid Password.");
-		login.enterPassword("Deepak@21");
+		login.enterPassword(login.getValuePropertyFile("password"));
 		System.out.println("STEP: Click on Login button.");
 		login.clickLoginButton();
 		System.out.println("VERIFY: Email Error message is displayed!");
@@ -77,6 +77,11 @@ public class LoginTest extends TestBase{
 //			flag = login.isLoginSuccessMsgDisplayed();
 //			Assert.assertFalse(flag, "Login Successfully msg not displayed");
 		}
+	}
+	
+	@Test
+	public void login() {
+		login("dgkankhar@gmail.com","Deepak@21");
 	}
 
 	@DataProvider(name = "LoginDataProviderFromExcel")

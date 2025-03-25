@@ -26,18 +26,15 @@ public class ExcelOperations {
 				Cell cell = sheet.getRow(rowIndex + 1).getCell(colIndex);
 				if (cell.getCellType() == CellType.STRING) {
 					data[rowIndex][colIndex] = cell.getStringCellValue();
-				}
-				else if (cell.getCellType() == CellType.NUMERIC) {
-					data[rowIndex][colIndex] = cell.getStringCellValue();
-				}
-				else if (cell.getCellType() == CellType.BOOLEAN) {
-					data[rowIndex][colIndex] = cell.getStringCellValue();
+				} else if (cell.getCellType() == CellType.NUMERIC) {
+					data[rowIndex][colIndex] = cell.getNumericCellValue();
+				} else if (cell.getCellType() == CellType.BOOLEAN) {
+					data[rowIndex][colIndex] = cell.getBooleanCellValue();
 				}
 			}
 		}
 		wb.close();
-		System.out.println(data);
+		//System.out.println(data);
 		return data;
-
 	}
 }

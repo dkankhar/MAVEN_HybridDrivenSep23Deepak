@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-25T11:39:05 IST" name="Suite" finished-at="2025-03-25T11:39:17 IST" duration-ms="12339">
+    <groups>
+    </groups>
+    <test started-at="2025-03-25T11:39:05 IST" name="Test" finished-at="2025-03-25T11:39:17 IST" duration-ms="12339">
+      <class name="testScripts.LoginTestPractice">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:05 IST" name="setUp" finished-at="2025-03-25T11:39:07 IST" duration-ms="2397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginFromPropertyValues()[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:07 IST" name="loginFromPropertyValues" finished-at="2025-03-25T11:39:08 IST" duration-ms="427" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginFromPropertyValues -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:08 IST" name="tearDown" finished-at="2025-03-25T11:39:08 IST" duration-ms="69" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginFromPropertyValues status=SUCCESS method=LoginTestPractice.loginFromPropertyValues()[pri:0, instance:testScripts.LoginTestPractice@2c35e847] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:09 IST" name="setUp" finished-at="2025-03-25T11:39:11 IST" duration-ms="1618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginDataDriven(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:11 IST" name="verifyLoginDataDriven" data-provider="LoginDataProviderFromExcel" finished-at="2025-03-25T11:39:11 IST" duration-ms="433" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[denishsantoki74@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Welcome@1234]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Fail]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginDataDriven -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:11 IST" name="tearDown" finished-at="2025-03-25T11:39:11 IST" duration-ms="54" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginDataDriven status=SUCCESS method=LoginTestPractice.verifyLoginDataDriven(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testScripts.LoginTestPractice@2c35e847] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:11 IST" name="setUp" finished-at="2025-03-25T11:39:14 IST" duration-ms="2679" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyLoginDataDriven(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:14 IST" name="verifyLoginDataDriven" data-provider="LoginDataProviderFromExcel" finished-at="2025-03-25T11:39:14 IST" duration-ms="430" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[dgkankhar@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Deepak@21]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Pass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginDataDriven -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:14 IST" name="tearDown" finished-at="2025-03-25T11:39:14 IST" duration-ms="103" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginDataDriven status=SUCCESS method=LoginTestPractice.verifyLoginDataDriven(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testScripts.LoginTestPractice@2c35e847] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:14 IST" name="setUp" finished-at="2025-03-25T11:39:15 IST" duration-ms="1243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyValidationMsgs()[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:15 IST" name="verifyValidationMsgs" finished-at="2025-03-25T11:39:17 IST" duration-ms="1759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyValidationMsgs -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:testScripts.LoginTestPractice@2c35e847]" started-at="2025-03-25T11:39:17 IST" name="tearDown" finished-at="2025-03-25T11:39:17 IST" duration-ms="49" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyValidationMsgs status=SUCCESS method=LoginTestPractice.verifyValidationMsgs()[pri:0, instance:testScripts.LoginTestPractice@2c35e847] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testScripts.LoginTestPractice -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

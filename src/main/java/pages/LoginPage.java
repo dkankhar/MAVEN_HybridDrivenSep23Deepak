@@ -5,9 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import base.ControlActions;
+import utility.PropOperations;
 
 public class LoginPage extends ControlActions {
-
+	
 	@FindBy(id = "userEmail")
 	WebElement userEmailElement;
 
@@ -40,6 +41,7 @@ public class LoginPage extends ControlActions {
 
 		// driver.findElement(By.id("userPassword")).sendKeys(uPassword);
 		enterPassword(uPassword);
+		
 
 		// driver.findElement(By.id("login")).click();
 		clickLoginButton();
@@ -57,7 +59,8 @@ public class LoginPage extends ControlActions {
 
 	public void clickLoginButton() {
 		System.out.println("STEP: User clicks on Login button.");
-		loginButtonElement.click();
+		//loginButtonElement.click();
+		clickOnElement(loginButtonElement, true);
 	}
 
 	public boolean isLoginSuccessMsgDisplayed() {
@@ -81,5 +84,10 @@ public class LoginPage extends ControlActions {
 
 	public boolean isPasswordErrorMsgDisplayed() {
 		return isElementVisible(passwordRequiredMsg);
+	}
+	
+	public String getValuePropertyFile(String key) {
+		return getValueFromProperties(key);
+		
 	}
 }

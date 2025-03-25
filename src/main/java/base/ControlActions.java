@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
@@ -23,23 +24,23 @@ import utility.PropOperations;
 
 public abstract class ControlActions {
 	protected static WebDriver driver;
-	private static PropOperations propOperation;
+	protected static PropOperations propOperation = new PropOperations(ConstantPath.ENV_FILEPATH);;
 	private static WebDriverWait wait;
-
+	
 	public static void launchBrowser() {
-		propOperation = new PropOperations(ConstantPath.ENV_FILEPATH);
-		//System.setProperty(ConstantPath.CHROME_DRIVER_KEY, ConstantPath.CHROME_DRIVER_PATH);
-		ChromeOptions chromeOptions = new ChromeOptions();
+		System.setProperty(ConstantPath.CHROME_DRIVER_KEY, ConstantPath.CHROME_DRIVER_PATH);
+		//ChromeOptions chromeOptions = new ChromeOptions();
 		//chromeOptions.addArguments("headless");
 		//chromeOptions.setHeadless(true);
-		chromeOptions.addArguments("start-maximized");
-		WebDriverManager.chromedriver().setup();		// Third Party Maven Dependency
-		driver = new ChromeDriver(chromeOptions);
-		//driver.manage().window().maximize();
+		//chromeOptions.addArguments("start-maximized");
+		//WebDriverManager.chromedriver().setup();		// Third Party Maven Dependency
+		//driver = new ChromeDriver(chromeOptions);
+		driver  = new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.get(propOperation.getValue("url"));
 		wait = new WebDriverWait(driver, ConstantPath.WAIT);
 	}
-
+	
 	public static void closeBrowser() {
 		driver.close();
 	}
@@ -167,10 +168,15 @@ public abstract class ControlActions {
 	// PageFactory Element
 	protected void clickOnElement(WebElement element, boolean isWaitRequired) {
 		waitTillElementIsClickable(element);
+		element.click();
 	}
 	
 	protected boolean elementIsSelected(WebElement element) {
 		return element.isSelected();
+	}
+	
+	protected String getValueFromProperties(String key) {
+		return propOperation.getValue(key);
 	}
 
 }
