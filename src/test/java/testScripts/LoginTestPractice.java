@@ -35,6 +35,7 @@ public class LoginTestPractice extends TestBase{
 		login.enterUserEmail(login.getValuePropertyFile("username"));
 		login.enterPassword(login.getValuePropertyFile("password"));
 		login.clickLoginButton();
+		//Test
 	}
 	
 	@Test
